@@ -1,37 +1,28 @@
 <?php 
+	require_once('../model/db.class.php');
 	class Paciente {
-		$nombre=null;
-		$apellido=null;
-		$dir=null;
-		$edad=null;
-		$peso=null;
-		$sexo=null;
-		$dni=null;
-		function __construct() {
-		}
 		function validate(){
 			$token=true;
 			if (isset($_POST['nombre']) && isset($_POST['apellido']) && isset($_POST['dir']) && isset($_POST['edad']) && isset($_POST['peso']) && isset($_POST['sexo']) && isset($_POST['dni'])){
-				$nombre=$_POST['nombre'];
-				$apellido=$_POST['apellido'];
-				$dir=$_POST['dir'];
-				$edad=$_POST['edad'];
-				$peso=$_POST['peso'];
-				$sexo=$_POST['sexo'];
-				$dni=$_POST['dni'];
+				$this->$nombre=$_POST['nombre'];
+				$this->$apellido=$_POST['apellido'];
+				$this->$dir=$_POST['dir'];
+				$this->$edad=$_POST['edad'];
+				$this->$peso=$_POST['peso'];
+				$this->$sexo=$_POST['sexo'];
+				$this->$dni=$_POST['dni'];
 			}else{
 				$token=false;
 			}
 			return $token;
-		}			
-		function new(){
-			$q=null;
+		}
+		function nuevo(){
 			if($this->validate){
-				$q="insert into paciente values('$nombre','$apellido','$dir',$edad,$peso,$sexo,'$dni')";
+				$q= new database();
+				$r=$q->consulta("insert into paciente values('$this->$nombre','$this->$apellido','$this->$dir',$this->$edad,$this->$peso,$this->$sexo,'$this->$dni')");
+				print $q;
 			}
 		}
-		function search_dni(){
-			if()
-		}
+		$this->nuevo();
 	}
 ?>
