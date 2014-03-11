@@ -1,0 +1,40 @@
+		body{
+			background-image: url(http://www.diariolaprimeraperu.com/online/imagestmp/usuarios/laprimeradigital/2013/septiembre/24/minsa_1380050654.jpg);
+			-webkit-background-size: 600px 284px;
+			background-size: 600px 284px;
+			background-position: 50% 50% ;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+		.hide{
+			display: none;
+		}
+		li{
+			text-decoration: none;
+			display: inline-block;
+			margin-right: 20px;
+		}
+		*{
+			box-sizing:border-box;
+			-moz-box-sizing:border-box
+		}
+		input,textarea,select,h1,h2,table{
+			display: block;
+			margin: 0 auto;
+			width: 90%;
+			margin-top: 20px;
+			padding:8px;
+		}
+		input[type='submit'],input[type='reset']{
+			width: 40%;
+			margin-left: 30px;
+			display: inline-block;
+		}
+		section{
+			width: 60%;
+			max-width: 500px;
+			margin: 0 auto;
+		}
+		section:last-child{
+			margin-top: 120px;
+		}
