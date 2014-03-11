@@ -23,10 +23,6 @@ class database {
  public function consulta($sql)
  {
     $resultado = mysql_query($sql,$this->conexion);
-    if(!$resultado){
-     echo 'MySQL Error: ' . mysql_error();
-     exit;
-    }
     return $resultado;
  }
 

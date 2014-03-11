@@ -20,7 +20,7 @@
 		<h1>Paciente</h1>
 		<div id='create'>
 			<div id="query">
-				<form action="/query-user" method="POST">
+				<form action="controller/paciente-find.class.php" method="POST" id="f1">
 					<h2>Nuevo Paciente</h2>
 					<input type="text" name="dni" required placeholder="Ingrese su DNI">
 					<input type="submit" value="Consultar">
@@ -28,7 +28,8 @@
 				</form>
 				<span></span>
 			</div>		
-			<form action="/new-user" method="POST" class="hide">				
+			<form action="/new-user" method="POST" class="hide" id="f2">	
+				<input type="text" name="dni" readonly placeholder="Ingrese su DNI">			
 				<input type="text" name="nombre" required placeholder="Nombre">
 				<input type="text" name="apellido" required placeholder="Apellido">
 				<textarea name="dir" cols="10" rows="3" required placeholder="Direccion">
