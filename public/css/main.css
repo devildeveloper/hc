@@ -1,6 +1,6 @@
 		body{
-			background-image: url(http://www.diariolaprimeraperu.com/online/imagestmp/usuarios/laprimeradigital/2013/septiembre/24/minsa_1380050654.jpg);
-			-webkit-background-size: 600px 284px;
+			/*background-image: url(http://www.diariolaprimeraperu.com/online/imagestmp/usuarios/laprimeradigital/2013/septiembre/24/minsa_1380050654.jpg);
+			*/-webkit-background-size: 600px 284px;
 			background-size: 600px 284px;
 			background-position: 50% 50% ;
 			background-repeat: no-repeat;
@@ -25,16 +25,32 @@
 			margin-top: 20px;
 			padding:8px;
 		}
-		input[type='submit'],input[type='reset']{
+		input[type='submit'],input[type='reset'],input[type='button']{
 			width: 40%;
 			margin-left: 30px;
 			display: inline-block;
 		}
 		section{
-			width: 60%;
+			width: 100%;
 			max-width: 500px;
 			margin: 0 auto;
 		}
 		section:last-child{
 			margin-top: 120px;
 		}
+        .button-success,
+        .button-error,
+        .button-warning,
+        .button-secondary {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+        .button-warning {
+            background: rgb(223, 117, 20); /* this is an orange */
+        }
+@media screen and (min-width: 800px){
+	section{
+		width: 60%;
+	}
+}
