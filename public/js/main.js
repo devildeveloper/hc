@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(document).on('ready',init);
 function init(){
 	$("#b1").on("click",function(){
@@ -10,7 +9,8 @@ function init(){
 			if(d == 1){
 				$(".current").fadeOut();
 				$("#new-hc").delay(500).fadeIn();
-				$("#new-hc input[name='dni']").val($("#f1 input[name='dni']").val())
+				$("#new-hc input[name='dni']").val($("#f1 input[name='dni']").val());
+				alert('el paciente existe');
 			}else{
 				$(".current").fadeOut();
 				alert("El paciente no se encuentra registrado, se procedera con el registro.")
@@ -25,7 +25,7 @@ function cancel(){
 	if(r){
 		window.location.reload();
 	}
-=======
+}
 $(document).on("ready",init);
 function init(){
 	$("#f1").on("submit",valida_pac_01);
@@ -47,5 +47,4 @@ function valida_pac_01(e){
 			console.log(data);
 		}
 	})
->>>>>>> 6170df2f99cf52b7896752faeb1f51e33b4df7c4
 }

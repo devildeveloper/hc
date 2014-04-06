@@ -10,96 +10,12 @@
 	<h1><img src="" alt=""></h1>
 	<section class='current'>
 		<h1>Paciente</h1>
-<<<<<<< HEAD
-		<form action="/query-user" method="POST" id="f1">
+		<form action="controller/paciente.php" method="POST" id="f1">
 			<h2>Ingrese un numero de dni</h2>
-			<input type="text" name="dni" required placeholder="Ingrese su DNI">
-			<input class="pure-button pure-button-primary" type="button" value="Consultar" id='b1'>
+			<input type="text" name="dni" required pattern=".{8,8}" placeholder="Ingrese su DNI">
+			<input class="pure-button pure-button-primary" type="submit" value="Consultar" id='b1'>
 			<input class="pure-button button-warning" type="reset" value="Cancelar">
 		</form>
 	</section>
-	<section id='new-user' class='hide'>
-		<h1>Nuevo Paciente</h1>
-		<form action="/new-user" method="POST" >				
-			<input type="text" name="nombre" required placeholder="Nombre">
-			<input type="text" name="apellido" required placeholder="Apellido">
-			<textarea name="dir" cols="10" rows="3" required placeholder="Direccion">
-			</textarea>
-			<input class='pure-button pure-button-primary' type="submit" value="Enviar">
-			<input class="pure-button button-warning" type="reset" value="Cancelar">	
-		</form>
-=======
-		<div id='create'>
-			<div id="query">
-				<form action="controller/paciente-find.class.php" method="POST" id="f1">
-					<h2>Nuevo Paciente</h2>
-					<input type="text" name="dni" required placeholder="Ingrese su DNI">
-					<input type="submit" value="Consultar">
-					<input type="reset" value="Cancelar">
-				</form>
-				<span></span>
-			</div>		
-			<form action="/new-user" method="POST" class="hide" id="f2">	
-				<input type="text" name="dni" readonly placeholder="Ingrese su DNI">			
-				<input type="text" name="nombre" required placeholder="Nombre">
-				<input type="text" name="apellido" required placeholder="Apellido">
-				<textarea name="dir" cols="10" rows="3" required placeholder="Direccion">
-
-				</textarea>
-				<input type="submit" value="Enviar">
-				<input type="reset" value="Cancelar">	
-			</form>
-		</div>
-		<div id="query2">
-			<form action="/query-user" method="POST">
-				<h2>Buscar Paciente</h2>
-				<input type="text" name="dni" required placeholder="Ingrese su DNI">
-				<input type="submit" value="Consultar">
-				<input type="reset" value="Cancelar">
-			</form>
-			<table class ="hide">
-				<thead>
-					<tr>
-						<td colspan="4">
-							Resultados de Busqueda	
-						</td>
-					</tr>
-				</thead>
-				<tr>
-					<td>Nombres</td>
-					<td>Apellidos</td>
-					<td>DNI</td>
-					<td>Direccion</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</table>
-		</div>
-
->>>>>>> 6170df2f99cf52b7896752faeb1f51e33b4df7c4
-	</section>
-	<section id='new-hc' class='hide'>
-		<h1>Historia Clinica</h1>	
-		<form action="/new-hc" method="POST"  >
-			<h2>Nueva Historia Clinica</h2>
-			<input type="text" name="dni" required readonly>
-			<select name="medicos">
-				<option value="1">1</option>
-			</select>
-
-			<input class='pure-button pure-button-primary' type="submit" value="Enviar">
-			<input class="pure-button button-warning" type="reset" value="Cancelar">
-		</form>
-	</section>
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<<<<<<< HEAD
-	<script src='public/js/main.js'></script>
-=======
-	<script src="public/js/main.js"></script>
->>>>>>> 6170df2f99cf52b7896752faeb1f51e33b4df7c4
 </body>
 </html>
